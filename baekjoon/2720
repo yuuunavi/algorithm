@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int tn, t;
+	int q; int d; int n; int p;
+	cin >> tn;
+
+	while (tn > 0) {
+		q = 0; d = 0; n = 0; p = 0;
+		cin >> t;
+		while (t > 0) {
+			if (t >= 25) {
+				q++;
+				t -= 25;
+			}
+			else if (t >= 10) {
+				d++;
+				t -= 10;
+			}
+			else if (t >= 5) {
+				n++;
+				t -= 5;
+			}
+			else
+			{
+				p++;
+				t--;
+			}
+		}
+		cout << q << " " << d << " " << n << " " << p << endl;
+		tn--;
+	}
+	return 0;
+}
