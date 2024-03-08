@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int n;
+	cin >> n;
+	int t = 1;
+	int m = 1;
+	
+	while (t < n) {
+		t += 6 * m;
+		m++;
+	}
+
+	cout << m << endl;
+	return 0;
+}
