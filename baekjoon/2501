@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int a, b;
+	cin >> a >> b;
+	int n = 0;
+
+	for (int i = 1; i <= a; i++) {
+
+		if (a % i == 0) n++;
+
+		if (n == b) {
+			cout << i << endl;
+			break;
+		}
+	}
+	if (n < b) cout << 0 << endl;
+
+	return 0;
+}
