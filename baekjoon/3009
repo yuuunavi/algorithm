@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int a, b, c, q, w, e;
+	cin >> a >> q >> b >> w >> c >> e;
+	int x, y;
+
+	if (b == c) x = a;
+	else if (a == c) x = b;
+	else x = c;
+
+	if (w == e) y = q;
+	else if (q == e) y = w;
+	else y = e;
+
+	cout << x << " " << y << endl;
+	return 0;
+}
