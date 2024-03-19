@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int n, a, b, x, y;
+	int ta = 10000;
+	int tb = 10000;
+	int pa = -10000;
+	int pb = -10000;
+	cin >> n;
+	while (n > 0) {
+		cin >> a >> b;
+		if (a < ta) ta = a;
+		if (b < tb) tb = b;
+		if (a > pa) pa = a;
+		if (b > pb) pb = b;
+		n--;
+	}
+	x = pa - ta;
+	y = pb - tb;
+	cout << x * y << endl;
+	return 0;
+}
