@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int a[3];
+
+	while (1) {
+		cin >> a[0] >> a[1] >> a[2];
+		sort(a, a + 3);
+		if (a[2] == 0) break;
+		else if (a[2] >= a[0] + a[1]) cout << "Invalid" << endl;
+		else if (a[0] == a[2]) cout << "Equilateral" << endl;
+		else if (a[0] == a[1] || a[1] == a[2]) cout << "Isosceles" << endl;
+		else cout << "Scalene" << endl;
+	}
+
+	return 0;
+}
