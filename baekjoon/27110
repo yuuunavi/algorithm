@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int n, a, b, c;
+	cin >> n >> a >> b >> c;
+	int r = 0;
+
+	if (n >= a) r += a;
+	else r += n;
+	if (n >= b) r += b;
+	else r += n;
+	if (n >= c) r += c;
+	else r += n;
+	
+	cout << r << endl;
+	return 0;
+}
