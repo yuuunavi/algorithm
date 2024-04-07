@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int a, b, bb, t, n;
+int c = 0;
+
+int separate(int n) {
+	a = n / 10;
+	b = n - a * 10;
+	n = a + b;
+	c++;
+	return n;
+}
+int calc(int t) {
+	a = t / 10;
+	bb = t - a * 10;
+	n = b * 10 + bb;
+	return n;
+}
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	cin >> n;
+	int num = n;
+
+	while (1) {
+		t = separate(n);		
+		n = calc(t);
+
+		if (num == n) break;
+	}
+	cout << c << endl;
+	return 0;
+}
