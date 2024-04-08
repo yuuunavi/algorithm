@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+void blank(int b) {
+	while (b > 0) {
+		cout << " ";
+		b--;
+	}
+}
+void star(int s) {
+	while (s > 0) {
+		cout << "*";
+		s--;
+	}
+}
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int n, b;
+	cin >> n;
+	b = n - 1;
+
+	for (int i = 1; i <= n; i++) {
+		blank(b);
+		star(i * 2 - 1);
+		cout << endl;
+		b--;
+	}
+	
+	return 0;
+}
