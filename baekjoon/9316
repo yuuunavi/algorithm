@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int n;
+	int a = 1;
+	cin >> n;
+	while (n > 0) {
+		cout << "Hello World, Judge " << a << "!" << endl;
+		a++; n--;
+	}
+	return 0;
+}
