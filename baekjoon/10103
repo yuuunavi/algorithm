@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int a = 100, b = 100;
+    int n, aa, bb;
+    cin >> n;
+    while(n>0){
+        cin >> aa >> bb;
+        if (aa < bb) a -= bb;
+        if (aa > bb) b -= aa;
+        n--;
+    }
+    cout << a << endl << b << endl;
+    return 0;
+}
