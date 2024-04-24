@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n, t;
+    int a = 0, b = 0;
+    cin >> n;
+    while(n>0){
+        cin >> t;
+        if(t == 0) a++;
+        else b++;
+        n--;
+    }
+    if(a>b) cout << "Junhee is not cute!" << endl;
+    else cout << "Junhee is cute!" << endl;
+    return 0;
+}
