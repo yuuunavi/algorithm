@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int k, n, m, r;
+    cin >> k >> n >> m;
+    if(k*n <= m) r = 0;
+    else{
+        r = (k*n) - m;
+    }
+    cout << r << endl;
+    return 0;
+}
