@@ -14,7 +14,7 @@ int main()
         if(r < e-c){
             cout << "advertise" << endl;
         }
-        else if (r = e-c){
+        else if (r == e-c){
             cout << "does not matter" << endl;
         }
         else{
