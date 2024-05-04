@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int a, b, c, d, e;
+    int f = 0;
+    cin >> a >> b >> c >> d >> e;
+    f = a*a + b*b + c*c + d*d + e*e;
+    cout << f % 10 << endl;
+    return 0;
+}
