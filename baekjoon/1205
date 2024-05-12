@@ -1,1 +1,35 @@
-.
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n, s, p;
+    int rank[100];
+
+    cin >> n >> s >> p;
+
+    for(int i=0; i<n; i++){
+        cin >> rank[i];
+    }
+    
+    int count = 0;
+    int r = 1;
+    for(int i=0; i<n; i++){
+        if(s < rank[i]) r++;
+        else if(s == rank[i]) r = r;
+        else break;
+        count++;
+    }
+
+    if(count == p) r = -1;
+    if(n == 0) r = 1;
+
+    cout << r << endl;
+
+    return 0;
+}
