@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int a, b, v, x, y;
+    cin >> a >> b >> v;
+
+    if(a == v) y = 1;
+    else {
+        x = (v-b) % (a-b);
+        y = (v-b) / (a-b);
+        if(x != 0) y++;
+    }
+    cout << y << endl;
+    return 0;
+}
