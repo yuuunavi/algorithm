@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false); 
+    cin.tie(NULL); cout.tie(NULL);
+
+    string s;
+    int sum = 10;
+
+    cin >> s;
+
+    for(int i=0; i<s.size(); i++){
+        if((s[i]==')' && s[i+1]=='(') || (s[i]=='(' && s[i+1]==')') && i+1 < s.size())
+            sum += 10;
+        else if((s[i]==')' && s[i+1]==')') || (s[i]=='(' && s[i+1]=='(') && i+1 < s.size())
+            sum += 5;
+    }
+    cout << sum << endl;
+    return 0;
+}
