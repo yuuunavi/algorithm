@@ -1,0 +1,36 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    string input;
+    int result = 0;
+    string tmp;
+    bool minus = 0;
+
+    cin >> input;
+    for(int i=0; i<=input.size(); i++){
+        if(input[i] == '+' || input[i] == '-' || i==input.size()){
+            if(minus) {
+                result -= stoi(tmp);
+                tmp = "";
+            }
+            else {
+                result += stoi(tmp);
+                tmp = "";
+            }
+        }
+        else {
+            tmp += input[i];
+        }
+        if(input[i] == '-') {
+            minus = 1;
+        }
+    }
+    cout << result << endl;
+    return 0;
+}
