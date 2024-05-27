@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    double n, t;
+    string s;
+    cin >> n;
+
+    while(n--){
+        cin >> t;
+        getline(cin, s);
+
+        for(int i=0; i < s.size(); i++){
+            switch (s[i])
+            {
+            case '@':
+                t *= 3;
+                break;
+            case '#':
+                t -= 7;
+                break;
+            case '%':
+                t += 5;
+                break;
+            }
+        }
+        printf("%.2f\n", t);
+    }
+    return 0;
+}
