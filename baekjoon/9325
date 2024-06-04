@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int t, n, s;
+    int p[100];
+    int q[10000];
+    cin >> t;
+    for(int i=0; i<t; i++){
+        int r = 0;
+        cin >> s >> n;
+        for(int j=0; j<n; j++){
+            cin >> p[j] >> q[j];
+            r += p[j]*q[j];
+        }
+        cout << s+r << endl;
+    }
+    return 0;
+}
