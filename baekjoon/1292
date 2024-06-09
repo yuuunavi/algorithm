@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int arr[1001];
+    int a, b, ans=0, t=1;
+    for(int i=1; i<=1000; i++){
+        for(int j=1; j<=i; j++){
+            arr[t] = i;
+            if(t>1000) break;
+            t++;
+        }
+    }
+    cin >> a >> b;
+    for(int i=a; i<=b; i++){
+        ans += arr[i];
+    }
+    cout << ans << endl;
+    return 0;
+}
