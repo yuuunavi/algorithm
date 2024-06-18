@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int t, p, m, n;
+    cin >> t;
+    for(int i=0; i<t; i++){
+        int seat[501] = {0};
+        int ans = 0;
+        cin >> p >> m;
+        for(int j=0; j<p; j++){
+            cin >> n;
+            if(seat[n] == 0) seat[n] = 1;
+            else ans ++;
+        }
+        cout << ans << endl;
+    }
+    return 0;
+}
