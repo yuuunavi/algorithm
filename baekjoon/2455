@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int p;
+    int t = 0;
+    int max = 0;
+    for(int i=0; i<4; i++){
+        cin >> p;
+        t -= p;
+        cin >> p;
+        t += p;
+        if(t > max) max = t;
+    }
+    cout << max << endl;
+    return 0;
+}
