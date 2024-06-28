@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int arr[10];
+    int mode[101] = {0};
+    int avg = 0, ans = 0, tmp;
+    for(int i=0; i<10; i++){
+        cin >> tmp;
+        arr[i] = tmp;
+        avg += tmp;
+        tmp /= 10;
+        mode[tmp]++;
+    }
+    avg /= 10;
+    tmp = 0;
+    for(int i=1; i<=100; i++){
+        if(mode[i] > tmp){
+            tmp = mode[i];
+            ans = i;
+        }
+    }
+    cout << avg << endl;
+    cout << ans * 10 << endl;
+    return 0;
+}
