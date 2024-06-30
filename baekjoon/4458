@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n;
+    string s;
+    cin >> n;
+    cin.ignore();
+    while(n--){
+        getline(cin, s);
+        if(s[0] >= 'a' && s[0] <= 'z') s[0] -= 32;
+        cout << s << endl;
+    }
+    return 0;
+}
