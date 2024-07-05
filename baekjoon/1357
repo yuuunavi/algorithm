@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int a, b, sum;
+    string as, bs, ans;
+
+    cin >> as >> bs;
+    reverse(as.begin(), as.end());
+    reverse(bs.begin(), bs.end());
+
+    a = stoi(as);
+    b = stoi(bs);
+
+    sum = a + b;
+    ans = to_string(sum);
+    reverse(ans.begin(), ans.end());
+
+    cout << stoi(ans) << endl;
+    return 0;
+}
