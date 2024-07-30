@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int t, n, c, sum;
+    double g, gpa;
+    cin >> t;
+
+    cout << fixed;
+    cout.precision(1);
+
+    for(int i=0; i<t; i++){
+        cin >> n;
+        sum = 0;
+        gpa = 0;
+
+        for(int j=0; j<n; j++){
+            cin >> c >> g;
+            sum += c;
+            gpa += g*c;
+        }
+        gpa /= sum;
+        cout << sum << " " <<gpa << endl;
+    }
+    return 0;
+}
