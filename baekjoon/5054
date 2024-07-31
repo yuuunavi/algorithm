@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int t, n, x, res, max, min;
+    cin >> t;
+    for(int i=0; i<t; i++){
+        cin >> n;
+        max = -1, min = 100;
+        for(int j=0; j<n; j++){
+            cin >> x;
+            if(x < min) min = x;
+            if(x > max) max = x;
+        }
+        res = (max - min) * 2;
+        cout << res << endl;
+    }
+    return 0;
+}
