@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n, m;
+    string s = "";
+    cin >> n >> m;
+
+    for(int i=0; i<n; i++){
+        s += to_string(n);
+
+        if(s.size() >= m){
+            s = s.substr(0, m);
+            break;
+        }
+    }
+    cout << s << endl;
+
+    return 0;
+}
