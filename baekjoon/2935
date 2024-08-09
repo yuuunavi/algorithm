@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    string a, b;
+    char o;
+    cin >> a >> o >> b;
+
+    int sizeA = a.size();
+    int sizeB = b.size();
+    switch (o) {
+    case '+':
+        if (sizeA >= sizeB) {
+            a[sizeA - sizeB] = a[sizeA - sizeB] + 1;
+            cout << a << endl;
+        }        
+        else {
+            b[sizeB - sizeA] = '1';
+            cout << b << endl;
+        }
+        break;
+    case '*':
+        for (int i = 1; i < sizeB; ++i) {
+            a += '0';
+        }
+        cout << a << endl;
+        break;
+    }
+    return 0;
+}
