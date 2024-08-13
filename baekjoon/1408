@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int a[3], b[3];
+    scanf("%d:%d:%d", &a[0], &a[1], &a[2]);
+    scanf("%d:%d:%d", &b[0], &b[1], &b[2]);
+    for(int i=2; i>=0; i--){
+        b[i] -= a[i];
+        if(b[i] < 0){
+            if(i>0){
+                b[i] += 60;
+                b[i-1]--;
+            }
+            else
+                b[0] += 24;
+        }
+    }
+    printf("%02d:%02d:%02d\n", b[0], b[1], b[2]);
+    return 0;
+}
