@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n;
+    cin >> n;
+    vector<pair<pair<int, int>, pair<int, string>>> std(n);
+
+    for(int i=0; i<n; i++){
+        cin >> std[i].second.second >> std[i].second.first >> 
+        std[i].first.second >> std[i].first.first;
+    }
+
+    sort(std.begin(), std.end());
+    cout << std[n-1].second.second << endl;
+    cout << std[0].second.second << endl;
+
+    return 0;
+}
