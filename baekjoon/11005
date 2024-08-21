@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n, b, t;
+    string ans;
+    cin >> n >> b;
+
+    while(n>0){
+        t = n % b;
+        if(t > 9){
+            t = t - 10 + 'A';
+            ans += t;
+        }
+        else {
+            ans += '0' + t;
+        }
+        n /= b;
+    }
+    reverse(ans.begin(), ans.end());
+    cout << ans << endl;
+    return 0;
+}
