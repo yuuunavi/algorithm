@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int s, m, l;
+    cin >> s >> m >> l;
+    if(s + (m*2) + (l*3) < 10) cout << "sad" << endl;
+    else cout << "happy" << endl;
+    return 0;
+}
