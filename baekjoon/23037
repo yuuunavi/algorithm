@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+
+    int n, t, p=10, ans=0;
+    cin >> n;
+
+    for(int i=0; i<5; i++){
+        t = n % p;
+        ans += t*t*t*t*t;
+        n /= 10;
+    }
+    cout << ans << endl;
+    return 0;
+}
