@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s;
+    int n, a, b;
+    cin >> n;
+    getchar();
+
+    for(int i=0; i<n; i++){
+        getline(cin, s);
+        a = 0; b = 0;
+
+        for(int j=0; j<s.size(); j++){
+            switch(s[j]){
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                            a++;
+                            break;
+                case ' ':
+                            break;
+                default :
+                            b++;
+                            break;
+            }
+        }
+        cout << b << " " << a << endl;
+    }
+}
